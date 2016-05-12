@@ -34,7 +34,7 @@ public class App extends Jooby {
         
     });
     
-    get("/todos/listall", req -> {
+    get("/todos", req -> {
             return contatos;
         }).name("list all contacts.");
     
