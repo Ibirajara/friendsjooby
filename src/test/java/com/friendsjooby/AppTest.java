@@ -20,7 +20,7 @@ public class AppTest extends BaseTest {
         "}";
 
         server.post("/contacts")
-            .body(json, "application/json")
+            .body(json, "application/json") 
             .expect(200);
     }
     @Test

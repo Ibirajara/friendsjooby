@@ -101,7 +101,7 @@ public class App extends Jooby {
    */
   private Integer newFriend(){
       nc = 0;
-      for(Contato c: contatos){
+      for(Contato c: contatos){ 
           if(c.getId() > nc){
               nc = c.getId();
           }
