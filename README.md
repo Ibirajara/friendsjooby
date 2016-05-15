@@ -18,9 +18,9 @@
 Developer | Method | @Test | Descrição
 :-- | :-- | :-- | :--
 [ Ibirajara Barrel Junior   ] | Get |  OK       | Exibe "Welcome to your Address book!!";
-[ Ibirajara Barrel Junior   ] | Get/todos |  NO       | Exibe todos os contatos;
-[ Ibirajara Barrel Junior   ] | Post/todos |  OK       | Inclui novo contato;
-[ Ibirajara Barrel Junior   ] | Get/find:id |  OK       | Retorna contato por id;
+[ Ibirajara Barrel Junior   ] | Get/contacts |  NO       | Exibe todos os contatos;
+[ Ibirajara Barrel Junior   ] | Post/contacts |  OK       | Inclui novo contato;
+[ Ibirajara Barrel Junior   ] | Get/contacts:id |  OK       | Retorna contato por id;
 
 
 ## :beginner: Requisitos 
@@ -50,9 +50,9 @@ git config --global user.name seuNome | Seta um nome global para o computador;
 
 ## A aplicação possui quatro métodos, são eles:
 	* GET: Retorna "Welcome to your Address book!!" no index;
-	* GET/todos: Retorna a lista de contatos;
-	* POST/todos: Adiciona um novo contato passando os dados(Nome e telefone) através de POST.
-	* GET/find/:id Busca um contato baseado no id passado como parâmetro.
+	* GET/contacts: Retorna a lista de contatos;
+	* POST/contacts: Adiciona um novo contato passando os dados(Nome e telefone) através de POST.
+	* GET/contacts:id Busca um contato baseado no id passado como parâmetro.
 
 
 Para executá-la é preciso iniciar o servidor com o código que está na tabela "Comandos Básicos (Criação do projeto - MVN)".
@@ -61,6 +61,6 @@ Com o servidor iniciado acessamos a aplicação através de url.
 URL | Funcionalidade
 :-- | :-- 
 http://localhost:8080/ | Retorna "Welcome to your Address book!!" no index;
-http://localhost:8080/todos | Retorna a lista de contatos;
-http://localhost:8080/todos | Adiciona um novo contato;
-http://localhost:8080/find:id | Retorna o usuário referente ao id.
+http://localhost:8080/contacts | Retorna a lista de contatos;
+http://localhost:8080/contacts | Adiciona um novo contato;
+http://localhost:8080/contacts:id | Retorna o usuário referente ao id.
