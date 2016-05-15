@@ -19,14 +19,14 @@ public class AppTest extends BaseTest {
             "    \"phone\":\"99991234\"\n" +
         "}";
 
-        server.post("/todos")
+        server.post("/contacts")
             .body(json, "application/json")
             .expect(200);
     }
     @Test
     public void findById() throws Exception{
-        server.post("/todos").body(CONTACT_IN, "application/json");
-        server.get("/find1").expect(CONTAC_OUT).expect(200);
+        server.post("/contacts").body(CONTACT_IN, "application/json");
+        server.get("/contacts1").expect(CONTAC_OUT).expect(200);
     }
 
 }

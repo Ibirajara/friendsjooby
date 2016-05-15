@@ -7,6 +7,7 @@ import org.jooby.MediaType;
 import org.jooby.Results;
 import org.jooby.json.Jackson;
 
+
 /**
  * @author Ibirajara Barrel Junior
  * Sistema de Agenta com inserção e busca de contato.
@@ -27,12 +28,13 @@ public class App extends Jooby {
       
     /**
      * @author Ibirajara Barrel Junior
+     * @param id um id,to tipo inteiro.
      * Página de busca de contato por id.
      * O id do usuario é passado como parâmetro.
      * Deve retornar o contato se encontrado, ou uma mensagem de não encontrado
      * quando for o caso.
      */
-    get("/find:id", (req) -> {
+    get("/contacts:id", (req) -> {
         Integer id = null;
         String result = null;
         int statusCode = 404;
@@ -53,7 +55,7 @@ public class App extends Jooby {
      * @author Ibirajara Barrel Junior
      * Retorna todos os contatos da lista.
      */
-    get("/todos", req -> {
+    get("/contacts", req -> {
             return contatos;
         }).name("list all contacts.");
     
@@ -61,7 +63,7 @@ public class App extends Jooby {
      * @author Insere um contato. faz a verificaçao dos campos name e phone
      * e conclui a insersao, retornando um json do contato inserido.
      */
-    post("/todos", req -> {
+    post("/contacts", req -> {
         String message = null;
         String jsonInString = req.body().value();
         Contato c = mapper.readValue(jsonInString, Contato.class);
